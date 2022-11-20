@@ -2,6 +2,21 @@
     display: flex;
     justify-content: center;
     font-size: 14vw;
+    color: #ffd97d;
+    animation: infinite linear changetx 3s;
+
+    @keyframes changetx {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+
+
 }
 
 
@@ -95,20 +110,22 @@
         }
 
     }
-.page{
-    display:none;
-}
 
-.page:target{
-    display: flex;
-}
+    .page {
+        display: none;
+    }
 
-.page,
-.page:target ~ #image-container  {
-    display: none;
-}
-#image-container,
-.page:target {
-    display: flex;
-  }
+    .page:target {
+        display: flex;
+    }
+
+    .page,
+    .page:target~#image-container {
+        display: none;
+    }
+
+    #image-container,
+    .page:target {
+        display: flex;
+    }
 }
