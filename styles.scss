@@ -4,99 +4,97 @@
     font-size: 14vw;
 }
 
-.image-container {
-    
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex: 1;
-}
-
-
-.image-container img {
-    max-width: 350px;
-    max-height: 1000px;
-}
-
-.my-nice-image {
-    display: flex;
-    justify-content: center;
-}
-
-.character-name {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-}
-
-.card-container {
-    max-width: 350px;
-}
 
 .nav-and-image-container {
     display: flex;
     flex-direction: row;
-}
 
-.navigation-container {
-    position: fixed;
-}
-
-.fake-menu {
-    width: 200px;
-}
-
-.icon::before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.shop::before {
-    background-image: url(./icons/outline_store_black_24dp.png);
-}
-
-.shopper::before {
-    background-image: url(./icons/outline_shopping_bag_black_24dp.png);
-}
-
-.shop:hover:before {
-    background-image: url(./icons/baseline_store_black_24dp.png);
-}
-
-.shopper:hover:before {
-    background-image: url(./icons/baseline_store_black_24dp.png);
-}
-
-.buttons-container {
-    display: flex;
-}
-
-.buttons {
-    flex: 1;
-}
-.form{
-    display: none;
-    
-    flex-direction: column;
-    margin-left: 30%;
-    width: 20%;
-    .box{
-        border-color: green;
-
-        
-    } 
-    
-
-    .box:focus{
-        background-color: rgb(24, 211, 86);
+    .navigation-container {
+        position: fixed;
     }
 
-}
+    .fake-menu {
+        width: 200px;
+    }
 
+    .image-container {
 
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1;
+        display: flex;
+
+        .image-container img {
+            max-width: 350px;
+            max-height: 1000px;
+        }
+
+        .card-container {
+            max-width: 350px;
+
+            .character-name {
+                display: flex;
+                justify-content: center;
+                font-size: 30px;
+            }
+
+            .my-nice-image {
+                display: flex;
+                justify-content: center;
+            }
+
+            .buttons-container {
+                display: flex;
+
+                .buttons {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .icon::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .shop::before {
+        background-image: url(./icons/outline_store_black_24dp.png);
+    }
+
+    .shopper::before {
+        background-image: url(./icons/outline_shopping_bag_black_24dp.png);
+    }
+
+    .shop:hover:before {
+        background-image: url(./icons/baseline_store_black_24dp.png);
+    }
+
+    .shopper:hover:before {
+        background-image: url(./icons/baseline_store_black_24dp.png);
+    }
+
+    .form {
+        display: none;
+
+        flex-direction: column;
+        margin-left: 30%;
+        width: 20%;
+
+        .box {
+            border-color: green;
+
+        }
+
+        .box:focus {
+            background-color: rgb(24, 211, 86);
+        }
+
+    }
 .page{
     display:none;
 }
@@ -106,10 +104,11 @@
 }
 
 .page,
-.page:target ~ #form  {
+.page:target ~ #image-container  {
     display: none;
 }
-#form,
+#image-container,
 .page:target {
-    display: block;
+    display: flex;
   }
+}
